@@ -3,10 +3,11 @@ import XCTest
 
 final class CppIssueReproTests: XCTestCase {
     func testExample() throws {
-        // XCTest Documentation
-        // https://developer.apple.com/documentation/xctest
-
-        // Defining Test Cases and Test Methods
-        // https://developer.apple.com/documentation/xctest/defining_test_cases_and_test_methods
+        let expected = "19RCQ6412280359"
+        let mockLat = 31.45
+        let mockLon = -70.43
+        let calc = CoordinateCalculator()
+        let actual = calc.coverttoMGRS(lat: mockLat, lon: mockLon)
+        XCTAssertEqual(expected, actual)
     }
 }
